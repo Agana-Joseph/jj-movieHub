@@ -55,13 +55,13 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-neutral-900 text-white min-h-screen max-w-7xl mx-auto px-4 py-8">
       <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
         {/* Main Content (Left Side) */}
         <div className="lg:w-3/4">
           {/* Movie Player Section */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden mb-8">
-            <div className="relative pt-[56.25%] bg-black">
+          <div className="bg-neutral-800 rounded-lg overflow-hidden mb-8">
+            <div className="relative pt-[56.25%] bg-neutral-900">
               {/* Placeholder for video player - replace with actual player */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -76,7 +76,7 @@ const MovieDetails = () => {
                 {movie.title} ({movie.release_date.substring(0, 4)})
               </h1>
               <div className="flex items-center mb-4">
-                <span className="bg-blue-600 px-2 py-1 rounded mr-2 text-sm">
+                <span className="bg-neutral-600 px-2 py-1 rounded mr-2 text-sm">
                   {movie.vote_average.toFixed(1)}/10
                 </span>
                 <span className="text-gray-400">
@@ -105,15 +105,15 @@ const MovieDetails = () => {
           </div>
         </div>
 
-        {/* Trending Sidebar (Right Side) */}
+        {/* Trending*/}
         <div className="lg:w-1/4">
-          <div className="bg-gray-800 rounded-lg p-6 sticky top-4">
+          <div className="bg-neutral-600 rounded-lg p-6 sticky top-4">
             <h2 className="text-xl font-bold mb-4">TRENDS NOW</h2>
             <div className="space-y-4">
               {trendingMovies.map((movie, index) => (
                 <div 
                   key={movie.id} 
-                  className="flex items-center justify-between hover:bg-gray-700 p-2 rounded cursor-pointer"
+                  className="flex items-center justify-between hover:bg-neutral-700 p-2 rounded cursor-pointer"
                   onClick={() => navigate(`/movie/${movie.id}`)}
                 >
                   <div>
