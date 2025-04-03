@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import MovieFinder from './components/MovieFinder';
 import AIRecommendations from './components/AIRecommendations';
+import MovieDetails from './Pagaes/MovieDetails';
 
 function App() {
   return (
@@ -9,13 +10,11 @@ function App() {
       <Navbar />
       <main className="container mx-auto p-4 bg-neutral-900">
         <Routes>
-          {/* Exact root path match */}
           <Route path="/" element={<MovieFinder />} exact />
           
-          {/* AI Recommendations path */}
           <Route path="/ai-recommendations" element={<AIRecommendations />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
           
-          {/* Optional: Catch-all route for 404 pages */}
           {/* <Route path="*" element={<div>Page Not Found</div>} /> */}
         </Routes>
       </main>
