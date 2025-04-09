@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/NavBar';
+import Navbar from './components/Navbar';
 import MovieFinder from './components/MovieFinder';
 import AIRecommendations from './components/AIRecommendations';
 import MovieDetails from './Pagaes/MovieDetails';
